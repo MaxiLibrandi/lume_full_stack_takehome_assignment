@@ -9,6 +9,40 @@
  
 ---
 
+## Maximo Librandi - Solution Description
+
+### Approach:
+
+For this assignment, I followed the approach described below:
+
+- The Table shows the data fetched from the API handler (pages/api/data.ts) in a tabular format. 
+- The columns being shown are: ID, Name, Email, Street, City, Zipcode, Phone, and Status.
+- Each cell is colored based on the severity of the error according to the provided guidelines (critical: red, warning: yellow, no error: green).
+- If there is an error in a cell, the error message is shown as a tooltip when hovering over the cell.
+- Each row has also a button "Error Summary" which when clicked, shows a modal with the error summary for that row. The summary includes the attribute name, error message, and severity. The errors are sorted by severity and attribute name.
+- There is a button "Export to CSV" which when clicked, downloads the data in CSV format.
+- For the styling, I used the React Bootstrap library.
+
+### Assumptions:
+
+I made the following assumptions while working on this assignment:
+
+- The API handler (pages/api/data.ts) returns the data in the format as shown in the provided MOCK_DATA.
+- The severity of the error can be either "critical" or "warning".
+- There could be multiple errors for one record in the data.
+- The address is already provided in different columns (Street, City, Zipcode) and does not need to be combined.
+- When exporting to CSV, the errors are stored as a JSON string.
+
+### Next Steps:
+
+If I had more time to work on this assignment, I would add the following improvements:
+
+- Add pagination to the table to handle large datasets.
+- Add search, sort, and filter functionality to the table.
+- Improve the styling and make the UI more user-friendly.
+
+---
+
 ### **Take-Home Assignment: Data Review, Editor, and Exporter**
 
 **Objective**: Build a data review interface that queries JSON data from a Next.js API, displays the data in a table format with validation errors, and allows users to export the data in CSV format. You will also color-code validation errors and provide error details in an interactive way.
